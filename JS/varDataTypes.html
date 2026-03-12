@@ -6,7 +6,8 @@
     <title>Dta Value Types in JS</title>
 </head>
 <body>
-    <script>
+</body>
+<script>
         // JS Data Value Types
         //Primitive- immutable-single value data type in js
         //String , Number , Boolean , Undefined,Null , BigInt and Symbol
@@ -74,9 +75,23 @@
             console.log("updated way" + stu1[x]);
         }
 
+        //object-collection of keys and its value
+        //create an object-using literal way and new keyword
 
-    </script>
-
-    
-</body>
+        let  student={
+           name:"Shubho Sarkar",
+           age:23,
+           isMarried:false,
+           address:{},
+           education:"null",
+           Branch:"cse",
+           section:23,
+           education:["10th","12th","B.Tech"],
+           degree:"B.Tech",
+           Branch:"cse",
+        };
+         console.log(student);
+         console.log(typeof(student));
+         
+ </script>     
 </html>
