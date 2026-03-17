@@ -20,7 +20,47 @@
             console.log("Hello " + text);
         }
         demo1("React");
+        function add(a,b=12){
+            console.log("Addiion is " + (a+b));
+        }
+        add(123,321);
+         //Synchronous and Asynchronous-synchronous programming executes tasks sequentially and blocks the main thread until each operation is complete, while asynchronous programming allows tasks to run independently in the background, preventing the application from freezing and improving responsiveness
+
+        //Synchronous
+        function cal(x,y){
+          function add(a,b){
+            console.log(a+b);
+          }
+          function mul(a,b){
+            console.log(a*b);
+          }
         
+        mul(3,6);
+        add(3,6);
+        }
+        cal();
+        //Anonymous function:-A fn without a name,often used as a callback or assigned to a variable.
+        let msg=function(){
+            console.log(typeof(msg));
+        }
+        msg1();
+        
+        //arrow functions
+        let msg2=(a,b)=>{
+            var num1=a;
+            var num2=b;
+            var res=num1/num2;
+            console.log("Result is " + res);
+        }
+        msg2(10,20);
+
+        //IIFE :-
+
+        (function(){
+            console.log("Hello World!");
+        })();
+        //short code for above function
+        (msg=>console.log("hello"))();
     </script>
 </body>
 </html>
