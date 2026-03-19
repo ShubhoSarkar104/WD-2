@@ -61,6 +61,59 @@
         })();
         //short code for above function
         (msg=>console.log("hello"))();
+
+        //promises
+        let myPromoise=new Promise(function(resolve,reject){
+            let age=25;
+            if(age>=18){
+                resolve("You are eligible to vote");
+            }
+            else{
+                reject("You are not eligible to vote");
+            }
+        });
+        myPromoise.theb(msg=>console.lof(msg)).catch(err=>console.log(err));
+        
+        //api...
+        async function userInfo(){
+            try{
+            let userData=await fetch('https://api.github.com/users/ersanjeevsoni');
+            let response=await userData.json();
+            console.log(response);}//try end
+            catch(error){
+                console.log(error);
+            }//catch end
+        }//function end
+        userInfo();
+        //Higher-order functions:- A higher-order function is a function that takes one or more functions as arguments,
+        //map() is a higher-order function that creates a new array by applying a provided function to each element of the original array.
+        //filter() is a higher-order function that creates a new array with all elements that pass a test implemented by the provided function.
+        //reduce() is a higher-order function that applies a provided function against an accumulator and each element in the array (from left to right) to reduce it to a single value.
+        //forEach() is a higher-order function that executes a provided function once for each array element.
+          let num=[4,5,6,7,5,3,2,1];
+          //map
+            let mapResult=num.map(x=>x*2);
+            console.log("Map Result is " + mapResult);
+            //filter
+            let filterResult=num.filter(x=>x%2==0);
+            console.log("Filter Result is " + filterResult);
+            //reduce
+            let reduceResult=num.reduce((acc,curr)=>acc+curr,0);
+            console.log("Reduce Result is " + reduceResult);
+                //forEach
+                console.log("ForEach Result is ");
+                num.forEach(x=>console.log(x*2));
+            
+        //Local storage:-
+        let myinfo={
+            name:"Shubho Sarkar",
+            age:18,
+            city:"Delhi",
+        }
+        localStorage.setItem('mynifo',JSON.stringify(myinfo));
+        let storeData=JSON.parse(localStorage.getItem('myinfo'));
+        console.log(storeData.name);
+
     </script>
 </body>
 </html>
